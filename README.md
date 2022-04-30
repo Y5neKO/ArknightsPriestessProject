@@ -1,0 +1,2 @@
+# ArknightsPriestess
+Arknights auto tool
