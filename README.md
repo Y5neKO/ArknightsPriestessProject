@@ -1,5 +1,5 @@
 # ArknightsPriestess
-<img src="https://img-blog.csdnimg.cn/988a8f0254af4f94bcdbe9232d46c2b6.png" alt="image-20220503164740855" style="zoom:30%;" />
+<img src="https://img-blog.csdnimg.cn/7512889713bd422dbd791e17359ed1d3.png" alt="image-20220503164740855" style="zoom:30%;" />
 <img src="https://img-blog.csdnimg.cn/66faca6cebf54f778e201362c8a34388.png" alt="image-20220503164740855" style="zoom:30%;" />
 
 ## AKP - ArknightsPriestess
