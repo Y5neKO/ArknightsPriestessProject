@@ -1,5 +1,12 @@
 # ArknightsPriestess
+<img src="https://img-blog.csdnimg.cn/988a8f0254af4f94bcdbe9232d46c2b6.png" alt="image-20220503164740855" style="zoom:30%;" />
+<img src="https://img-blog.csdnimg.cn/66faca6cebf54f778e201362c8a34388.png" alt="image-20220503164740855" style="zoom:30%;" />
+
 ## AKP - ArknightsPriestess
+<p align="left">
+  <a href='https://blog.ysneko.com'><img src="https://img.shields.io/static/v1?label=Powered%20by&message=Y5neKO&color=green"></a>
+  <a href='https://www.oracle.com/java/technologies/downloads/#java8'><img src="https://img.shields.io/static/v1?label=JDK&message=1_8&color=yellow"></a>
+</p>
 名字取自Eys of Priestess - 女祭司之眼（普瑞塞斯之眼）
 
 目前正在开发中，广泛征求意见.
@@ -32,3 +39,14 @@
 - *2022.04.30* | 发布了 v0.1 测试版本
 
 - ~ | 功能更新中
+
+### 贡献者
+<li>
+  <a href="https://github.com/Y5neKO">
+    <img width="[image size]" height="[image size]" src="[Gravatar URL]">
+    <span>[name with Github login as fallback]</span>
+  </a>
+</li>
+
+### 使用许可
+[MIT](LICENSE) © Y5neKO
