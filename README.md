@@ -59,4 +59,4 @@
 
 
 ## 使用许可
-[MIT](LISENCE) © Y5neKO
+[MIT](LICENSE) © Y5neKO
