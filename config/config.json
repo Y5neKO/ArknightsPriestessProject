@@ -1,6 +1,0 @@
-{
-	"adb_path": "D:\Nox\bin\adb.exe",
-	"log_path": "\log\",
-	"adbScreenshot_path": "\screen\",
-	"adbScreenshotName": "screenshot.png"
-}
