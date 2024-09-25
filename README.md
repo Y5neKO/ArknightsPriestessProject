@@ -21,22 +21,37 @@
 </p>
 
 ## AKP - ArknightsPriestess
+正在开发中....
 
-目前正在开发中，广泛征求意见.
+广泛向各位前端大佬征求前端设计!
 
+## 开发界面
+
+![img.png](img.png)
 
 ## 默认配置
 `JDK 8u411`  |  `IDE Intellij 2024.2`  |  `语言等级 8`
+
+## 架构
+后端: SpringBoot
+
+前端: JavaFx + WebView + HTML5
+
+调度器: C++(暂定)
 
 ## 目录结构
 
 `asset` 资产目录,包括用以识别的ui、按钮模板
 
+`env` 内置运行环境(jdk8u411)
+
 `files` 工具需要的重要文件
+
+`log` 日志目录
 
 `platform-tools` adb工具目录
 
-`screenshots` 暂存adb截图文件,识别出错可以查看该文件夹此时的截图状态
+`screenshots` 暂存adb截图文件,识别出错可以查看该文件夹内的截图状态
 
 `asset.properties` 资产路径配置文件
 

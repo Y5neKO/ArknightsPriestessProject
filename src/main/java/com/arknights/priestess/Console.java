@@ -6,7 +6,7 @@ import nu.pattern.OpenCV;
 import org.opencv.core.Core;
 
 public class Console {
-    public static void main(String[] args) throws Exception {
+    public void main_console() throws Exception {
         System.out.println(Copyright.getLogo());
 
         // 载入OpenCV库
@@ -34,7 +34,5 @@ public class Console {
 
         gameScene = Game_SceneIden.sceneIden();
         System.out.println(System_Log.buffer_logging("INFO", "Current scene: " + gameScene));
-
-        Game_Operate.backMain();
     }
 }
