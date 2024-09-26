@@ -27,7 +27,7 @@
 
 ## 开发界面
 
-![img.png](img.png)
+![img.png](README_IMG/img.png)
 
 ## 默认配置
 `JDK 8u411`  |  `IDE Intellij 2024.2`  |  `语言等级 8`
@@ -35,9 +35,22 @@
 ## 架构
 后端: SpringBoot
 
-前端: JavaFx + WebView + HTML5
+GUI: JavaFx + WebView + HTML5 + JavaScript + CSS
 
-调度器: C++(暂定)
+启动器: VBS(打包EXE)
+
+_ps:后续或许会转为C++来写_
+
+### 后端API说明
+```zsh
+heartbeat                       # 心跳包
+api                             # API端点
+ |----- main_console            # 执行著控制台函数（测试）
+ |----- console_log             # 获取控制台日志
+ |----- clear_log               # 清除控制台日志
+ |----- screenshot              # 获取当前截图
+ |----- eyes-of-priestess       # 普瑞塞斯之眼（处理后的截图）
+```
 
 ## 目录结构
 `AKPUI` GUI文件目录
@@ -54,10 +67,17 @@
 
 `screenshots` 暂存adb截图文件,识别出错可以查看该文件夹内的截图状态
 
+`AKP.vbs` 启动器vbs原文件
+
 `asset.properties` 资产路径配置文件
 
 `config.properties` 工具全局配置文件
 
+`GUI.bat` GUI启动批处理文件
+
+`Launcher.exe` VBS转EXE启动器
+
+`SpringBoot.bat` SpringBoot启动批处理文件
 
 ## 版本&更新日志
 **版本** v0.2
@@ -78,4 +98,3 @@
 
 ## 使用许可
 [MIT](LICENSE) © Y5neKO
-
