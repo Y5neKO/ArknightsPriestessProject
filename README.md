@@ -88,7 +88,7 @@ api                             # API端点
 ## 贡献者
 
 <a href="https://github.com/Y5neKO/ArknightsPriestessProject/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Y5neKO/ArknightsPriestessProject" />
+  <img src="https://contrib.rocks/image?repo=Y5neKO/ArknightsPriestessProject&t=123" />
 </a>
 
 ## 贡献者们
@@ -98,5 +98,3 @@ api                             # API端点
 
 ## 使用许可
 [MIT](LICENSE) © Y5neKO
-
-
