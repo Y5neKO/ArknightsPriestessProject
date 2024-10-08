@@ -1,6 +1,10 @@
 package com.arknights.priestess.springbootapi;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONPObject;
 import com.arknights.priestess.Console;
+import com.arknights.priestess.core.System_ConfigHandler;
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
@@ -12,9 +16,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -38,7 +40,7 @@ public class Rest_Controller {
     // 心跳包变量
     private static LocalDateTime lastRequestTime = LocalDateTime.now();
 
-    // ============================API清单============================
+    // ===========================================================API清单=============================================================
 
     /**
      * 心跳包接口
@@ -78,7 +80,6 @@ public class Rest_Controller {
      * 获取日志文件内容
      * @return 日志文件内容
      */
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/api/console_log")
     public String console_log() {
         String filePath = "log/console.log";
@@ -102,7 +103,6 @@ public class Rest_Controller {
      * 清空日志文件
      * @return 清空日志文件的结果
      */
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/api/clear_log")
     public String clear_log() {
         String filePath = "log/console.log";
@@ -120,7 +120,6 @@ public class Rest_Controller {
      * @return 响应实体
      * @throws IOException 如果读取文件失败，抛出异常
      */
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/api/screenshot")
     public ResponseEntity<byte[]> getImage() throws IOException {
         // 拼接图片的完整路径
@@ -142,7 +141,6 @@ public class Rest_Controller {
      * 获取毛刺效果图像
      * @return 处理后的图像字节数组和响应头
      */
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/api/eyes-of-priestess")
     public ResponseEntity<ByteArrayResource> getGlitchEffectImage() {
         Mat image = Imgcodecs.imread("screenshots/screenshot.png");
@@ -167,7 +165,26 @@ public class Rest_Controller {
                 .contentLength(imageBytes.length)
                 .body(resource);
     }
-    // ============================附属处理函数============================
+
+    @PostMapping("/api/config_set")
+    public String config_set(@RequestBody String json_config) throws Exception {
+        JSONObject jsonObject;
+
+        try {
+            jsonObject = JSON.parseObject(json_config);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+
+        for (String key : jsonObject.keySet()) {
+            String value = jsonObject.getString(key);
+            System_ConfigHandler.setProperty("PRTS.properties", key, value);
+        }
+
+        return json_config;
+    }
+
+    // ==================================================附属处理函数=======================================================
     /**
      * 添加文本水印到图像中
      * @param image 原图片
