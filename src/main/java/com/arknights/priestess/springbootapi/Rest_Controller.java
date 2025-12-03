@@ -2,7 +2,6 @@ package com.arknights.priestess.springbootapi;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.JSONPObject;
 import com.arknights.priestess.Console;
 import com.arknights.priestess.core.System_ConfigHandler;
 import org.opencv.core.*;
